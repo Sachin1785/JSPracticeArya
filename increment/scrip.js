@@ -1,19 +1,21 @@
-let saveEl = document.getElementById("save-el")
-let countEl = document.getElementById("count-el")
-let count = 0
+let saveEl = document.getElementById("save-entries")
+let countEl = document.getElementById("count")
+let t = 0
 
 console.log(saveEl)
 
-function increment() {
-    count += 1
-    countEl.textContent = count
+function incr() {
+    t += 1
+    countEl.textContent = t
 }
 
 function save() {
-    let countStr = count + " - "
-    // 2. Create a variable that contains both the count and the dash separator, i.e. "12 - "
-    // 3. Render the variable in the saveEl using innerText
-    saveEl.textContent += countStr
-    // NB: Make sure to not delete the existing content of the paragraph
-    console.log(count)
+    saveEl.textContent += t + " , "
+    console.log(t)
+}
+
+function clearit() {
+    t = 0
+    countEl.textContent = t
+    saveEl.textContent = "Previous entries: "
 }
