@@ -4,10 +4,11 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
+    
 }
 
 h1 {
-    color: goldenrod;
+    color: rgb(246, 201, 87);
 }
 
 #message-el {
