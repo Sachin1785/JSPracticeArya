@@ -6,15 +6,19 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+document.getElementById('newCard').style.visibility = 'hidden';
+
 function rand() {
     return Math.floor(Math.random() * 13) + 1
 }
 
 function startGame() {
+    cards = []
     cards = [rand(), rand()]
     sum = cards[0] + cards[1]
     isAlive = true
     hasBlackJack = false
+    document.getElementById('newCard').style.visibility = 'visible';
     renderGame()
 }
 
@@ -29,6 +33,7 @@ function renderGame() {
     } else {
         messageEl.textContent = "You're out!"
         isAlive = false
+        document.getElementById('newCard').style.visibility = 'hidden';
     }
 }
 
