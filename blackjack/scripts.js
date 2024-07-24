@@ -30,6 +30,8 @@ function renderGame() {
     } else if (sum === 21) {
         messageEl.textContent = "Blackjack!"
         hasBlackJack = true
+        document.getElementById('newCard').style.visibility = 'hidden';
+
     } else {
         messageEl.textContent = "You're out!"
         isAlive = false
